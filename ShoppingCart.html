@@ -1,0 +1,89 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Your Cart</title>
+
+      <!-- Tab Icon -->
+      <link rel="icon" href="Assets/HF Rockstar Emblem.png" type="image/png">
+
+      <!-- Flowbite CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />   
+
+      <script src="JavaScript/Populate.js"></script>
+      <script src="JavaScript/ShoppingCart.js"></script>
+      <script src="JavaScript/Add_To_Cart.js"></script>
+
+      <style>
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+  
+        .fade-in {
+          animation: fadeIn 0.5s ease-out;
+        }
+  
+        .slide-up {
+          animation: fadeIn 0.5s ease-out;
+        }
+      </style>
+
+  </head>
+  <body>
+
+    <!-- == NavBar Start == -->
+  <section id="NavBarContainer">
+
+  </section>
+  <!-- == NavBar End  == -->
+
+  <div class="container mx-auto p-8 py-36 pb-96">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="col-span-2">
+            <h2 class="text-3xl font-bold mb-4">Shopping Cart</h2>
+            <ul id="cartItemsList" class="space-y-4 border-t-2 border-zinc-600">
+                <!-- Cart items will be populated here -->
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Order Summary</h2>
+            <div class="flex justify-between mb-4">
+                <span>Total:</span>
+                <span id="cartTotalPrice" class="font-bold">₱0.00</span>
+            </div>
+            <a href="Checkout.html">
+              <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-500 transition-all border-b-4 border-zinc-900 hover:border-2">Proceed to Checkout</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+  <footer id="FooterContainer">
+    <!-- Display footer with Footer.js -->
+  </footer>
+
+      <!-- Tailwind CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Flowbite JS -->
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
+      <script src="JavaScript/Products__Storage.js"></script>
+
+      <script src="JavaScript/Navigation Bar.js"></script>
+
+      <script src="JavaScript/Footer.js"></script> 
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          document.body.classList.add('fade-in');
+          const elements = document.querySelectorAll('.fade-in, .slide-up');
+          elements.forEach(el => {
+            el.classList.add('fade-in');
+          });
+        });
+      </script>
+      
+  </body>
+  </html>
